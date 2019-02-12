@@ -26,11 +26,11 @@ of the dialogue(e.g. sw2012)
 How to run:
 
 First, put the file_list.txt parse_all.py and parse_all.sh into
-.../xml/ directory
+path/to/switchboard_dataset/xml/ directory
 
 Second, 
 mkdir /result 
-in the .../xml/ directory
+in the path/to/switchboard_dataset/xml/ directory
 
 Finally, run
 
