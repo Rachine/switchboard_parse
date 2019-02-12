@@ -14,5 +14,5 @@ for filename in files_terminals:
             terminal_file_list.append(filenumber)
 
 for swnum in terminal_file_list:
-    print swnum
+    print(swnum)
 

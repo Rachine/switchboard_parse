@@ -79,78 +79,78 @@ def pretty_print(AIDdict, AIDlist, BIDdict, BIDlist):
     while indexA < len(AIDlist) - 1 or indexB < len(BIDlist) - 1:
         if inwhich == 'A':
             if indexA >= len(AIDlist) - 1 and indexB < len(BIDlist):
-                print 'A', AIDlist[indexA],
+                print('A', AIDlist[indexA], end=' ')
                 for element in AIDdict[AIDlist[indexA]]:
                     if type(element) is tuple:
                         for subele in element:
-                            print subele,
+                            print(subele, end=' ')
                     elif type(element) is list:
                         for subele in element:
-                            print subele,
+                            print(subele, end=' ')
                     else:
-                        print element,
-                print ""
+                        print(element, end=' ')
+                print("")
                 inwhich = 'B'
-                print ''
+                print('')
                 continue
 
-            print 'A', AIDlist[indexA],
+            print('A', AIDlist[indexA], end=' ')
             for element in AIDdict[AIDlist[indexA]]:
                 if type(element) is tuple:
                     for subele in element:
-                        print subele,
+                        print(subele, end=' ')
                 elif type(element) is list:
                     for subele in element:
-                        print subele,
+                        print(subele, end=' ')
                 else:
-                    print element,
-            print ""
+                    print(element, end=' ')
+            print("")
             nextsentnum = int(AIDlist[indexA + 1].split('_')[0][1:])
             sentnum = int(AIDlist[indexA].split('_')[0][1:])
             if nextsentnum - sentnum > 1:
                 inwhich = 'B'
-                print ''
+                print('')
             if nextsentnum - sentnum == 1:
-                print ''
+                print('')
             indexA += 1
             # if indexA >= len(AIDlist) and indexB >= len(BIDlist):
             #     break
 
         if inwhich == 'B':
             if indexB >= len(BIDlist) - 1 and indexA < len(AIDlist):
-                print 'B', BIDlist[indexB],
+                print('B', BIDlist[indexB], end=' ')
                 for element in BIDdict[BIDlist[indexB]]:
                     if type(element) is tuple:
                         for subele in element:
-                            print subele,
+                            print(subele, end=' ')
                     elif type(element) is list:
                         for subele in element:
-                            print subele,
+                            print(subele, end=' ')
                     else:
-                        print element,
-                print ""
+                        print(element, end=' ')
+                print("")
                 inwhich = 'A'
-                print ''
+                print('')
                 continue
 
-            print 'B', BIDlist[indexB],
+            print('B', BIDlist[indexB], end=' ')
             for element in BIDdict[BIDlist[indexB]]:
                 if type(element) is tuple:
                     for subele in element:
-                        print subele,
+                        print(subele, end=' ')
                 elif type(element) is list:
                     for subele in element:
-                        print subele,
+                        print(subele, end=' ')
                 else:
-                    print element,
-            print ""
+                    print(element, end=' ')
+            print("")
             nextsentnum = int(BIDlist[indexB + 1].split('_')[0][1:])
             sentnum = int(BIDlist[indexB].split('_')[0][1:])
             if nextsentnum - sentnum > 1:
                 inwhich = 'A'
-                print ''
+                print('')
             if nextsentnum - sentnum == 1:
-                print ''
+                print('')
             indexB += 1
             # if indexA >= len(AIDlist) and indexB >= len(BIDlist):
             #     break
